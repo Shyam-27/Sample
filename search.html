@@ -2,67 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login / Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIT Search Page</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      background: #f8f9fa;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
     }
-    .container {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      width: 320px;
+    .search-container {
       text-align: center;
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      width: 400px;
     }
-    .container img {
-      max-width: 120px;
+    .search-container img {
+      width: 120px;
       margin-bottom: 20px;
     }
-    .container h2 {
-      margin-bottom: 15px;
+    .search-container h2 {
+      margin-bottom: 20px;
       color: #333;
     }
-    .input-field {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-    .btn {
+    .search-bar {
       width: 100%;
       padding: 12px;
-      background: #007bff;
-      border: none;
-      border-radius: 6px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .btn {
+      padding: 12px 25px;
+      background: #153677;
       color: white;
+      border: none;
+      border-radius: 8px;
       font-size: 16px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: 0.3s;
     }
     .btn:hover {
-      background: #0056b3;
+      background: #4e085f;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Logo (replace logo.png with your uploaded logo) -->
+  <div class="search-container">
+    <!-- Replace logo.png with your uploaded logo -->
     <img src="logo.png" alt="CIT Logo">
-    <h2>Login / Search</h2>
+    <h2>Search</h2>
     <form action="https://formspree.io/f/mqayeqap" method="POST">
-      <input type="text" name="username" class="input-field" placeholder="Username" required>
-      <input type="password" name="password" class="input-field" placeholder="Password" required>
-      <button type="submit" class="btn">Submit</button>
+      <input type="text" name="search_query" class="search-bar" placeholder="Type your search..." required>
+      <br>
+      <button type="submit" class="btn">Search</button>
     </form>
   </div>
 </body>
